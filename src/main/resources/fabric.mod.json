@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "ourcraft",
+	"version": "${version}",
+	"name": "Ourcraft",
+	"description": "Mod for the Ourcraft modpack.",
+	"authors": [
+		"bravely_beep"
+	],
+	"contact": {
+		"homepage": "https://github.com/bravely_beep/ourcraft-mod",
+		"sources": "https://github.com/bravely_beep/ourcraft-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ourcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bravelybeep.ourcraft.Ourcraft"
+		],
+		"client": [
+			"bravelybeep.ourcraft.OurcraftClient"
+		]
+	},
+	"mixins": [
+		"ourcraft.mixins.json",
+		{
+			"config": "ourcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {}
+}
